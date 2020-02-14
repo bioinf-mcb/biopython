@@ -409,6 +409,7 @@ def _read_v3(handle):
                         scanner_id, scanner_type = subfield.split()
                     except ValueError:
                         scanner_id = subfield.strip()
+                        scanner_type = 'None'
                     record.DatHeader["scanner-id"] = scanner_id
                     record.DatHeader["scanner-type"] = scanner_type
                     record.DatHeader["array-type"] = subfields[2]
